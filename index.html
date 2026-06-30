@@ -1,0 +1,1279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+    <!--<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>-->
+    <link rel="stylesheet" href="./Files/bootstrap.min.css">
+    <!-- <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css -->
+    <meta name="robots" content="index, follow" />
+    <meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="keywords"
+        content="Homepage, lab, Jiang Hao, jianghao, Hao Jiang, 江浩">
+    <link rel="stylesheet" href="./Files/jemdoc.css" type="text/css" />
+    <script src="jquery.min.js"></script>
+    <link rel="shortcut icon" href="./Files/favicon.jpg">
+    <title>Hao Jiang (seu) Homepage</title>
+    <style>
+        body {
+            /* 设置无衬线西文字体和优雅的中文字体 */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            
+            /* 将纯黑字体改为深灰色，视觉更高级、阅读不易疲劳 */
+            color: #333333;       
+            
+            /* 增加全局行高，让文字上下有呼吸感 */
+            line-height: 1.65;    
+            
+            /* 极其微弱的灰白色背景，比纯白更有质感（可选） */
+            background-color: #fcfcfc; 
+        }
+
+        /* === 2. 标题（H2）区块优化 === */
+        h2 {
+            font-size: 22px !important;
+            font-weight: 600 !important;
+            color: #2c3e50 !important; 
+            
+            /* 强制显示底部灰线，加深了一点点颜色 */
+            border-bottom: 2px solid #dcdcdc !important; 
+            
+            /* 确保标题像一个完整的长条区块，让线能拉长 */
+            display: block !important; 
+            
+            padding-bottom: 8px !important;
+            margin-top: 40px !important;
+            margin-bottom: 20px !important;
+        }
+
+        h2 i {
+            color: #005b44 !important; /* 图标墨绿色 */
+            margin-right: 5px !important;
+        }
+
+        .mcontainer {
+            display: flex;
+            align-items: center; /* Vertically center items */
+        }
+        .mcontainer img {
+            height: 20px; /* Set image height */
+            margin-left: 10px; /* Space between text and image */
+            margin-top: 4px;
+        }
+
+        /* === 3. 论文排版终极优化（专为长列表设计） === */
+        
+        /* 增加单篇论文的呼吸感 */
+        .pcontainer {
+            margin-bottom: 22px !important; /* 进一步拉开单篇论文的上下间距 */
+            padding-left: 0px !important;
+            line-height: 1.65 !important;
+            color: #3f3f3f !important;      /* 字体颜色稍微柔和，减缓长文阅读疲劳 */
+        }
+
+        /* 优雅地突出作者本人的名字，抛弃多余的下划线 */
+        .pcontainer strong {
+            color: #005b44 !important;      /* 建议使用深绿，或者深蓝 #1a365d，与H2标题呼应 */
+            font-weight: 700 !important;
+            text-decoration: none !important; /* 坚决不用下划线，保持清爽 */
+        }
+
+        /* 突出学术期刊/顶会名称 (i标签部分) */
+        .pcontainer i {
+            color: #2c3e50 !important;      /* 给期刊名一个偏深的蓝灰色 */
+            font-weight: 500 !important;
+        }
+
+        /* 优化底部的 IEEE URL / Code / arXiv 超链接 */
+        .pcontainer a {
+            color: #3182ce !important;      /* 现代化的链接蓝 */
+            text-decoration: none !important;
+            font-size: 0.95em !important;   /* 稍微缩小一点链接字号，凸显正文 */
+            margin-right: 4px !important;
+            transition: all 0.2s ease;
+        }
+
+        /* 鼠标悬浮在链接上的效果 */
+        .pcontainer a:hover {
+            color: #2b6cb0 !important;
+            text-decoration: underline !important;
+        }
+
+        /* 完美解决 Citation 图标和文字的垂直对齐问题 */
+        .pcontainer img {
+            vertical-align: text-bottom !important; /* 让图标和文字底部对齐 */
+            margin-bottom: 1px !important; 
+        }
+
+        /* === 4. 新闻和兴趣列表小圆点优化 === */
+        ul {
+            padding-left: 20px !important;
+        }
+
+        li {
+            margin-bottom: 12px !important;
+            line-height: 1.6 !important;
+        }
+
+        /* 优化 [2026.06] 等时间标签的质感 */
+        font[color="#FF0000"] {
+            color: #c53030 !important;      /* 将刺眼的纯红改为更有质感的砖红色 */
+            background-color: #fff5f5 !important;  /* 加上极其微弱的浅红底色，类似标签卡 */
+            padding: 2px 6px !important;
+            border-radius: 4px !important;
+            font-size: 0.95em !important;
+        }
+
+        /* ================= 5.研究方向名片化 ================= */
+        #interest-cards ul {
+            list-style: none !important;
+            padding-left: 0 !important;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        #interest-cards li {
+            background: #ffffff !important;
+            border: 1px solid #eef2f5 !important;
+            border-left: 4px solid #005b44 !important; /* 东大绿前缀线 */
+            padding: 15px 20px !important;
+            border-radius: 6px !important;
+            margin-bottom: 0 !important;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            transition: all 0.3s ease;
+        }
+
+        #interest-cards li:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,87,68,0.08);
+            background: #fafdfb !important;
+        }
+
+        #interest-cards li b {
+            font-size: 18px !important;  /* 字体从 16px 放大到 18px */
+            color: #1a365d !important;   /* 呈现高级的深蓝色 */
+            line-height: 1.4;
+            display: inline-block;
+            margin-bottom: 4px;          /* 让中英文之间多一点呼吸感 */
+        }
+
+        a[name] {
+            display: block;
+            scroll-margin-top: 30px; /* 跳转时在标题上方留出 30px 的呼吸空间 */
+        }
+
+        /* ================= 6. 个人主页专属链接标签 ================= */
+        .profile-tag {
+            display: inline-block;
+            background-color: #f8fafc;       /* 极浅的蓝灰底色，干净清爽 */
+            color: #1a365d !important;       /* 文字使用深海军蓝 */
+            padding: 4px 12px;               /* 标签内边距 */
+            border-radius: 20px;             /* 药丸形状的大圆角 */
+            font-size: 13.5px;
+            font-weight: 500;
+            text-decoration: none !important; /* 去除默认下划线 */
+            border: 1px solid #e2e8f0;       /* 淡淡的边框 */
+            margin-right: 8px;
+            margin-top: 8px;
+            transition: all 0.2s ease;       /* 增加顺滑的过渡动画 */
+        }
+
+        /* 鼠标悬停在标签上的特效 */
+        .profile-tag:hover {
+            background-color: #005b44;       /* 悬浮时背景变成高质感的东大绿 */
+            color: #ffffff !important;       /* 文字变成纯白 */
+            border-color: #005b44;
+            transform: translateY(-2px);     /* 鼠标放上去有微微上浮的效果 */
+            box-shadow: 0 4px 8px rgba(0, 91, 68, 0.15); /* 增加一点阴影 */
+        }
+
+        /* ================= 7. 论文列表微标签样式 ================= */
+        .pub-tag {
+            display: inline-block;
+            padding: 2px 8px;                /* 精简内边距，防止标签过大 */
+            font-size: 12px !important;      /* 字体稍小，避免喧宾夺主 */
+            font-weight: 500 !important;
+            border-radius: 4px;              /* 微圆角，显得干练 */
+            text-decoration: none !important;
+            margin-right: 4px;
+            margin-left: 2px;
+            transition: all 0.2s ease;
+            white-space: nowrap;             /* 核心：强制标签内部不换行 */
+        }
+
+        /* 针对不同类型的链接赋予不同的精致配色 */
+        .pub-tag-ieee {
+            background-color: #eef2f6;
+            color: #1a365d !important;
+            border: 1px solid #d0dae6;
+        }
+        .pub-tag-ieee:hover {
+            background-color: #1a365d;       /* 悬浮变深蓝 */
+            color: #ffffff !important;
+            border-color: #1a365d;
+        }
+
+        .pub-tag-arxiv {
+            background-color: #fff5f5;
+            color: #b7791f !important;       /* 类似 arXiv 的暗橘色/砖红系 */
+            border: 1px solid #fed7d7;
+        }
+        .pub-tag-arxiv:hover {
+            background-color: #c53030;
+            color: #ffffff !important;
+            border-color: #c53030;
+        }
+
+        .pub-tag-code {
+            background-color: #f0fdf4;
+            color: #166534 !important;       /* 精致的代码绿 */
+            border: 1px solid #bbf7d0;
+        }
+        .pub-tag-code:hover {
+            background-color: #166534;
+            color: #ffffff !important;
+            border-color: #166534;
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <a id="home" class="anchor"></a>
+
+    <div id="container">
+        <div class="container">
+
+            <table class="imgtable" style="width: 100%; border: none; margin-bottom: 20px;">
+                <tr>
+                    <td align="left" valign="top" style="border: none; padding-right: 20px;">
+                        <p class="mcontainer" style="margin-bottom: 10px;">
+                            <a href="./" style="text-decoration: none;">
+                                <span style="font-size: 28px; font-weight: 600; color: #1a365d; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+                                    Dr. Hao Jiang (江 浩)
+                                </span>
+                            </a>
+                            <a href="https://scholar.google.com/citations?user=wv7uLCMAAAAJ&hl=zh-CN" target="_blank" style="margin-left: 12px; display: inline-block; vertical-align: middle;">
+                                <img src="https://img.shields.io/badge/Scholar-Citations-005b44?style=flat&logo=google-scholar&logoColor=white" height="22px" alt="Google Scholar">
+                            </a>
+                        </p>
+                        <i> Ph.D., Professor, Ph.D. Supervisor </i>
+                        <br /><br />
+                        <a href="https://cyber.seu.edu.cn/" target="_blank">School of Cyber Science and Engineering</a><br />
+                        <a href="https://www.seu.edu.cn/" target="_blank">Southeast University</a><br />
+                        <br />
+                        Location: Jiulonghu Campus, No.2 SEU Road, Jiangning District, Nanjing, Jiangsu Province, P.R.China
+                        <br />
+                        <div style="line-height: 1.8; margin-top: 10px;">
+                            <A HREF="#Interest">Research Interest</A> |
+                            <A HREF="#Publications">Publications</A> |
+                            <A HREF="#Patents">Patents</A> |
+                            <A HREF="#Awards">Awards</A> |
+                            <A HREF="#Alumni">Alumni</A> |
+                            <A HREF="#Cooperation">Cooperation</A>
+                            <br />
+                            Email: <a href="mailto:jiang.hao@seu.edu.cn">jiang.hao@seu.edu.cn</a>
+                            <div style="margin-top: 5px;">
+                                <a href="https://ieeexplore.ieee.org/author/37398509400" target="_blank" class="profile-tag">
+                                    <i class="fa fa-id-card-o" aria-hidden="true" style="margin-right: 4px;"></i>IEEE Profile
+                                </a>
+                                <a href="https://scholar.google.com/citations?user=wv7uLCMAAAAJ&hl=zh-CN" target="_blank" class="profile-tag">
+                                    <i class="fa fa-graduation-cap" aria-hidden="true" style="margin-right: 4px;"></i>Google Scholar
+                                </a>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td align="right" valign="top" style="border: none; width: 220px; min-width: 220px; padding-left: 20px;">
+                        <a href="./">
+                            <img src="1.jpg" alt="Dr. Hao Jiang" height="230px" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); display: block; margin-left: auto; " />
+                        </a>
+                    </td>
+                </tr>
+            </table>
+
+            <A NAME="Interest">
+                <h2><i class="fa fa-search" aria-hidden="true"></i>&nbsp;&nbsp;Research Interest</h2>
+            </A>
+            
+            <div id="interest-cards">
+                <ul>
+                    <li>
+                        <b>6G Key Technologies</b><br>
+                        <span style="font-size: 15px; color: #555; line-height: 1.6; display: block;">6G无线通信关键技术（智能超表面 RIS、流态天线 FAS）</span>
+                    </li>
+                    <li>
+                        <b>LEO Satellite & UAV Links</b><br>
+                        <span style="font-size: 15px; color: #555; line-height: 1.6; display: block;">低轨卫星通信与无人机通信（海空场景信道建模与轨迹优化）</span>
+                    </li>
+                    <li>
+                        <b>Vehicle-to-Everything (V2X)</b><br>
+                        <span style="font-size: 15px; color: #555; line-height: 1.6; display: block;">车联网通信（高动态信道理论与多维资源分配）</span>
+                    </li>
+                    <li>
+                        <b>AI & Intelligent Sensing</b><br>
+                        <span style="font-size: 15px; color: #555; line-height: 1.6; display: block;">网络智能化与通算一体化（深度强化学习 DRL 核心应用）</span>
+                    </li>
+                </ul>
+            </div>
+
+            <br />
+            
+
+            <A NAME="Publications">
+                <h2><i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;Publications</h2>
+            </A>         
+
+            <p><b>
+                    <font style="font-size: 18px;">Journals</font>
+                </b>: </p>
+            <font size="3">
+                <ul>
+                    <p class="pcontainer">
+                        <span>[1] Y. Zhang, <strong>Hao Jiang</strong>, L. Zeng, Z. Chen, Z. Zhang, and F. Shu, "Deep Learning-Based Non-Stationary Statistical Channel Modeling for RIS-assisted V2V Integrated Sensing and Communication," <i>IEEE Internet of Things Journal</i>, Early Access, DOI: 10.1109/JIOT.2026.3704196. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11568771" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/JIOT.2026.3704196" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[2] S. Chen, Z. Zhang, <strong>Hao Jiang</strong>, K.-K. Wong, A. Li, and F. R. Ghadi, "Near-Field Beamforming and Port Selection for Fluid Antenna Systems," <i>IEEE Communications Letters</i>, Early Access, DOI: 10.1109/LCOMM.2026.3702003. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11556494" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <a href="https://github.com/sen5413/Near-Field-Beamforming-and-Port-Selection-for-Fluid-Antenna-Systems" target="_blank" class="pub-tag pub-tag-code"><i class="fa fa-code" style="margin-right: 3px;"></i>Code</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/LCOMM.2026.3702003" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[3] Z. Zhang, K.-K. Wong, K. Meng, D. Morales-Jimenez, <strong>Hao Jiang</strong>, C. Masouros, H. Shin, and Z. Zhang, "Geometry-Structured Channel Reconstruction for Conventional and Fluid Antenna Systems: Bayesian Inference and Fundamental Limits," <i>arXiv preprint arXiv:2606.04001</i>, 2026, DOI: 10.48550/arXiv.2606.04001. 
+                            <a href="https://arxiv.org/abs/2606.04001" target="_blank" class="pub-tag pub-tag-arxiv"><i class="fa fa-file-text-o" style="margin-right: 3px;"></i>arXiv URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.48550/arXiv.2606.04001" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[4] H. Wang, <strong>Hao Jiang</strong>, B. Zhu, and Z. Zhang, "Optical Reconfigurable Distributed Sources and Reflecting Surfaces for Distributed Optical Wireless Communications," <i>IEEE Transactions on Wireless Communications</i>, vol. 25, pp. 17274-17288, 2026, DOI: 10.1109/TWC.2026.3693310. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11533563" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/TWC.2026.3693310" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[5] Z. Zhang, J. Xu, K.-K. Wong, <strong>Hao Jiang</strong>, Z. Zhang, and H. Shin, "Finite-Aperture Planar Fluid Antenna Array," <i>arXiv preprint arXiv:2605.22040</i>, 2026, DOI: 10.48550/arXiv.2605.22040. 
+                            <a href="https://arxiv.org/abs/2605.22040" target="_blank" class="pub-tag pub-tag-arxiv"><i class="fa fa-file-text-o" style="margin-right: 3px;"></i>arXiv URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.48550/arXiv.2605.22040" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[6] Z. Zhang, K.-K. Wong, <strong>Hao Jiang</strong>, C. Masouros, and C.-B. Chae, "Cramér–Rao Bounds for Activity Detection in Conventional and Fluid Antenna Systems," <i>IEEE Wireless Communications Letters</i>, vol. 15, pp. 3059-3063, 2026, DOI: 10.1109/LWC.2026.3691385. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11513509" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/LWC.2026.3691385" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[7] Z. Zhang, Y. Wu, K.-K. Wong, <strong>Hao Jiang</strong>, and A. Li, "Jointly Correlated Dual-Side Fluid Antenna System," <i>arXiv preprint arXiv:2604.16942</i>, 2026, DOI: 10.48550/arXiv.2604.16942. 
+                            <a href="https://arxiv.org/abs/2604.16942" target="_blank" class="pub-tag pub-tag-arxiv"><i class="fa fa-file-text-o" style="margin-right: 3px;"></i>arXiv URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.48550/arXiv.2604.16942" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer" style="line-height: 1.6;">
+                        <span>
+                            [8] Z. Zhang, <strong>Hao Jiang</strong>, K.-K. Wong, H. Shin, and R. Murch, "Beyond Covariance: Generative Spatial Correlation Modeling and Channel Interpolation for Fluid Antenna Systems," <i>arXiv preprint arXiv:2604.16639</i>, 2026, DOI: 10.48550/arXiv.2604.16639.
+                            <span style="white-space: nowrap;">
+                                &nbsp;<a href="https://arxiv.org/abs/2604.16639" target="_blank" style="text-decoration: none;" class="pub-tag pub-tag-arxiv"><i class="fa fa-file-text-o" style="margin-right: 3px;"></i>arXiv URL</a>
+                                <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.48550/arXiv.2604.16639" style="vertical-align: middle; height: 20px; margin-left: 4px; display: inline-block;" onerror="this.style.display='none'">
+                            </span>
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[9] Y. Wu, Z. Zhang, <strong>Hao Jiang</strong>, K.-K. Wong, and C.-B. Chae, "Learned-Approximate Message Passing Under Karhunen–Loève Modeling for Fluid Antenna Systems," <i>IEEE Wireless Communications Letters</i>, vol. 15, pp. 2719-2723, 2026, DOI: 10.1109/LWC.2026.3682568. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11478428" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <a href="https://github.com/yuanhuiwu/FAS-KLLAMP" target="_blank" class="pub-tag pub-tag-code"><i class="fa fa-code" style="margin-right: 3px;"></i>Code</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/LWC.2026.3682568" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer" style="line-height: 1.6;">
+                        <span>
+                            [10] Y. Li, F. Shu, S. Chen, Y. Wu, M. Li, Z. Chen, <strong>Hao Jiang</strong>, and J. Wang, "Reinforcement Learning-Based Secure Near-field Directional Modulation Enhanced by Rotatable RIS," <i>arXiv preprint arXiv:2603.20608</i>, 2026, DOI: 10.48550/arXiv.2603.20608.
+                            <span style="white-space: nowrap;">
+                                &nbsp;<a href="https://arxiv.org/abs/2603.20608" target="_blank" style="text-decoration: none;" class="pub-tag pub-tag-arxiv"><i class="fa fa-file-text-o" style="margin-right: 3px;"></i>arXiv URL</a>
+                                <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.48550/arXiv.2603.20608" style="vertical-align: middle; height: 20px; margin-left: 4px; display: inline-block;" onerror="this.style.display='none'">
+                            </span>
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[11] Z. Zhang, J. Dang, D. Morales-Jimenez, <strong>Hao Jiang</strong>, Z. Zhang, and C. Masouros, "Joint Activity Detection and Channel Estimation for Fluid Antenna System Exploiting Geographical and Angular Information," <i>IEEE Journal of Selected Topics in Signal Processing</i>, vol. 20, no. 3, pp. 354-370, 2026, DOI: 10.1109/JSTSP.2026.3673148. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11440310" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/JSTSP.2026.3673148" style="vertical-align: middle; margin-left: 5px;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[12] Y. Zhao, Z. Chen, M. Li, J. Zhang, G. Meng, Z. Chen, and <strong>Hao Jiang</strong>, "Toward High-Efficient V2V Communication Networks: A Study on Channel Modeling and Level-Crossing Rate Analysis," <i>IEEE Transactions on Network Science and Engineering</i>, vol. 13, pp. 7949-7963, 2026, DOI: 10.1109/TNSE.2026.3674196. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11435002" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/TNSE.2026.3674196" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[13] Z. Zhang, K.-K. Wong, D. Morales-Jimenez, <strong>Hao Jiang</strong>, P. Ramírez-Espinosa, and C.-B. Chae, "Finite-Blocklength Fluid Antenna Systems With Spatial Block-Correlation Channel Model," <i>IEEE Wireless Communications Letters</i>, vol. 15, pp. 1911-1915, 2026, DOI: 10.1109/LWC.2026.3666168. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11398105" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <a href="https://github.com/BrooklynSEUPHD/Finite-blocklength-Fluid-Antenna-Systems-With-Spatial-Block-Correlation-Channel-Model" target="_blank" class="pub-tag pub-tag-code"><i class="fa fa-code" style="margin-right: 3px;"></i>Code</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/LWC.2026.3666168" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[14] H. Wang, <strong>Hao Jiang</strong>, B. Zhu, H. Zeng, and Z. Zhang, "Cascaded Optical Reconfigurable Intelligent Reflecting Surfaces for Multi-Hop Optical Wireless Communications," <i>IEEE Transactions on Communications</i>, vol. 74, pp. 5105-5121, 2026, DOI: 10.1109/TCOMM.2026.3663533. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11390707" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/TCOMM.2026.3663533" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[15] L. Zeng, X. Liao, W. Xie, Z. Ma, B. Xiong, and <strong>Hao Jiang</strong>, "UAV-to-ground channel modeling: (Quasi-)closed-form channel statistics and manual parameter estimation," <i>China Communications</i>, vol. 23, no. 1, pp. 47-66, 2026, DOI: 10.23919/JCC.ja.2023-0661. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11373485" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.23919/JCC.ja.2023-0661" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[16] Z. Zhang, K.-K. Wong, <strong>Hao Jiang</strong>, C. Masouros, and C.-B. Chae, "Cramer-Rao Bounds for Activity Detection in Conventional and Fluid Antenna Systems," <i>arXiv preprint arXiv:2602.11901</i>, 2026, DOI: 10.48550/arXiv.2602.11901. 
+                            <a href="https://ui.adsabs.harvard.edu/abs/2026arXiv260211901Z/abstract" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>ADS URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.48550/arXiv.2602.11901" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[17] H. Bian, F. Zhao, M. Chen, L. Liu, Y. Yao, <strong>Hao Jiang</strong> and F. Shu, "Movable Antenna-Enabled Secure Transmission for Active RIS-Aided ISAC Systems," <i>IEEE Transactions on Network Science and Engineering</i>, vol. 13, pp. 6325-6344, 2026, DOI: 10.1109/TNSE.2026.3657852. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11363436" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/TNSE.2026.3657852" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[18] Z. Zhang, K.-K. Wong, <strong>Hao Jiang</strong>, F. R. Ghadi, H. Shin, and Y. Zhang, "Finite-Aperture Fluid Antenna Array Design: Analysis and Algorithm," <i>IEEE Wireless Communications Letters</i>, vol. 15, pp. 3199-3203, 2026, DOI: 10.1109/LWC.2026.3685911. 
+                            <a href="https://ieeexplore.ieee.org/document/11488605" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/LWC.2026.3685911" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[19] L. Zeng, X. Liao, Z. Ma, R. Zhang, D. Niyato, and <strong>Hao Jiang</strong>, "Modeling and Analysis of Movable Antenna Aided MIMO Wideband UAV-to-UAV Channels for Low-Altitude Economy Networks," <i>IEEE Transactions on Wireless Communications</i>, vol. 25, pp. 10257-10273, 2026, DOI: 10.1109/TWC.2025.3649584. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11342417" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/TWC.2025.3649584" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[20] J. Xin, Y. Wang, F. Shu, F. Zhao, Y. Zhao, and <strong>Hao Jiang</strong>, "Energy Efficiency Analysis of Active RIS-Enhanced Wireless Network Under Power-Sum Constraint," <i>IEEE Transactions on Green Communications and Networking</i>, vol. 10, pp. 1654-1665, 2025, DOI: 10.1109/TGCN.2025.3648117. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11314594" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/TGCN.2025.3648117" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[21] X. Tian, Q. Zheng, B. Li, D. Qiao, K. Yu, Z. Wei, B. Li, <strong>Hao Jiang</strong>, X. Li, Y. Lin, and G. Gui, "A survey on deep learning enabled automatic modulation classification methods: Data representations, model structures, and regularization techniques," <i>Signal Processing</i>, 2026, DOI: 10.1016/j.sigpro.2025.110444. 
+                            <a href="https://www.sciencedirect.com/science/article/pii/S0165168425005602" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>ScienceDirect URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1016/j.sigpro.2025.110444" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[22] B. Zhang, D. Wang, D. Chang, X. Chen, Z. Chen, and <strong>Hao Jiang</strong>, "Toward Double-RIS-Assisted Low-Altitude A2G Channel Modeling and Analysis in Beam Domain for MIMO Communication Systems," <i>IEEE Internet of Things Journal</i>, vol. 13, no. 5, pp. 8697-8711, 2026, DOI: 10.1109/JIOT.2025.3641702. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11284844" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/JIOT.2025.3641702" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[23] W. Xiao, S. Jiang, D. Hong, <strong>Hao Jiang</strong>, Z. Chen, and W. Li, "BBDS-vSLAM: Multi-UAV Visual SLAM System with Blockchain-Based Data Security," <i>IEEE Embedded Systems Letters</i>, Early Access, DOI: 10.1109/LES.2025.3640718. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11278596" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/LES.2025.3640718" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[24] D. Chang, <strong>Hao Jiang</strong>, J. Zhou, L. Zeng, Z. Chen, and F. Shu, "Novel Physics-Based ARIS-Enhanced UAV-to-Vehicle Channel Modeling With 3-D Continuously Arbitrary Trajectory," <i>IEEE Internet of Things Journal</i>, vol. 13, no. 4, pp. 7341-7357, 2026, DOI: 10.1109/JIOT.2025.3638906. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11271456" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/JIOT.2025.3638906" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[25] <strong>Hao Jiang</strong>, X. Pan, W. Shi, L. Zeng, Z. Chen, and F. Shu, "Deep Reinforcement Learning Enabled UAV Trajectory Optimization for A2G Communication Systems," <i>IEEE Transactions on Cognitive Communications and Networking</i>, vol. 12, pp. 3164-3178, 2025, DOI: 10.1109/TCCN.2025.3633751. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11250962" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/TCCN.2025.3633751" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[26] W. Shi, <strong>Hao Jiang</strong>, Z. Chen, W. Hao, and F. Shu, "Three-Dimensional Physics-Based Channel Modeling for RIS-Empowered UAV Communications in Offshore Maritime Scenarios," <i>IEEE Wireless Communications Letters</i>, vol. 15, pp. 435-439, 2025, DOI: 10.1109/LWC.2025.3626214. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11218879" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/LWC.2025.3626214" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[27] X. Gan, H. Wang, X. Li, Z. Liu, <strong>Hao Jiang</strong>, and J. Wang, "Potential Threat to Cognitive Radio Networks: A Black-Box and Label-Consistent Backdoor Attack Against Modulation Recognition," <i>IEEE Transactions on Cognitive Communications and Networking</i>, vol. 12, pp. 1395-1410, 2025, DOI: 10.1109/TCCN.2025.3613523. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11176946" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/TCCN.2025.3613523" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer" style="line-height: 1.6;">
+                        <span>
+                            [28] Z. Zhang, D. Morales-Jimenez, J. Dang, Z. Zhang, C. Masouros, and <strong>Hao Jiang</strong>, "Low-Complexity CSI Acquisition Exploiting Geographical Diversity in Fluid Antenna System," <i>arXiv preprint arXiv:2509.08598</i>, 2025, DOI: 10.48550/arXiv.2509.08598.
+                            <span style="white-space: nowrap;">
+                                &nbsp;<a href="https://arxiv.org/abs/2509.08598" target="_blank" style="text-decoration: none;" class="pub-tag pub-tag-arxiv"><i class="fa fa-file-text-o" style="margin-right: 3px;"></i>arXiv URL</a>
+                                &nbsp;<a href="https://github.com/BrooklynSEUPHD/Supplementary-Material-Step-wise-Derivations-on-EM-AMP" target="_blank" style="text-decoration: none;" class="pub-tag pub-tag-code"><i class="fa fa-code" style="margin-right: 3px;"></i>Code</a>
+                                <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.48550/arXiv.2509.08598" style="vertical-align: middle; height: 20px; margin-left: 4px; display: inline-block;" onerror="this.style.display='none'">
+                            </span>
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[29] Z. Li, H. Wang, Z. Shen, S. Zhang, <strong>Hao Jiang</strong>, and Z. Liu, "A Secure Wireless Transmission Scheme: Reconstructing Spatial Radio Environment Map and Redirecting Electromagnetic Signal Propagation Path," <i>IEEE Open Journal of the Communications Society</i>, vol. 6, pp. 7441-7458, 2025, DOI: 10.1109/OJCOMS.2025.3605018. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11146515" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/OJCOMS.2025.3605018" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[30] W. Gao, Z. Xie, Y. Wang, Y. Yao, <strong>Hao Jiang</strong>, and F. Shu, "Covert Beamforming Design for Holographic Integrated Sensing and Communication With Imperfect CSI," <i>IEEE Internet of Things Journal</i>, vol. 12, no. 22, pp. 48043-48059, 2025, DOI: 10.1109/JIOT.2025.3604084. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11145120" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/JIOT.2025.3604084" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[31] 房胜, 朱秋明, 谢悦天, <strong>江浩</strong>, 李辉, 吴启晖, 毛开, 华博宇, "无线信道硬件孪生技术研究进展与挑战," <i>电子与信息学报</i>, 第47卷, 第8期, 2416-2428页, 2025. 
+                            <a href="https://scholar.google.com/scholar?q=无线信道硬件孪生技术研究进展与挑战" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>Google Scholar URL</a>
+                        </span>
+                    </p>
+
+                    <p class="pcontainer" style="line-height: 1.6;">
+                        <span style="vertical-align: middle;">
+                            [32] H. Bian, Q. Zhang, W. Gao, <strong>Hao Jiang</strong>, R. Chen, and Y. Yao, "Computation Efficiency Optimization for RIS-BackCom-Aided ISCC Systems," <i>IEEE Internet of Things Journal</i>, vol. 12, no. 22, pp. 47191-47205, 2025, DOI: 10.1109/JIOT.2025.3600303. 
+                            <span style="display: inline-block; white-space: nowrap; vertical-align: middle;">
+                                <a href="https://ieeexplore.ieee.org/abstract/document/11142794" target="_blank" style="text-decoration: none;" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                                <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/JIOT.2025.3600303" style="vertical-align: middle; height: 20px; margin-left: 4px; display: inline-block;" onerror="this.style.display='none'">
+                            </span>
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[33] H. Luo, L. Huang, <strong>Hao Jiang</strong>, Y. Huang, and L. Lin, "An Enhanced Neural Communication Model for IoNT Based on the Oscillatory Characteristics of Membrane Potential," <i>IEEE Internet of Things Journal</i>, vol. 12, no. 21, pp. 44626-44641, 2025, DOI: 10.1109/JIOT.2025.3599845. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11129033" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/JIOT.2025.3599845" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[34] W. Xie, H. Wang, Z. Shen, X. Li, F. Shu, and <strong>Hao Jiang</strong>, "Few-Shot Radio Frequency Fingerprint Identification for UAVs Based on Gaussian Prototypical Network Model," <i>IEEE Communications Letters</i>, vol. 29, no. 10, pp. 2248-2252, 2025, DOI: 10.1109/LCOMM.2025.3591973. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11091344" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/LCOMM.2025.3591973" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[35] <strong>Hao Jiang</strong>, W. Shi, Z. Chen, Z. Zhang, K.-K. Wong, and H. Shin, "Dynamic Channel Modeling of Fluid Antenna Systems in UAV Communications," <i>IEEE Wireless Communications Letters</i>, vol. 14, no. 10, pp. 3169-3173, 2025, DOI: 10.1109/LWC.2025.3588223. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11078433" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/LWC.2025.3588223" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[36] G. Wu, X. Zhao, <strong>Hao Jiang</strong>, and Z. Chen, "Joint Beamforming Optimization for UAV and an Active RIS-Assisted Hybrid DFRC Systems," <i>IEEE Internet of Things Journal</i>, vol. 12, no. 18, pp. 38059-38072, 2025, DOI: 10.1109/JIOT.2025.3585202. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11063470" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/JIOT.2025.3585202" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer" style="line-height: 1.6;">
+                        <span style="vertical-align: middle;">
+                            [37] L. Yue, X. Wu, W. Hao, <strong>Hao Jiang</strong>, and Y. Zhang, "Robust Resource Optimization for IRS-Assisted ICCS Systems With Imperfect CSI," <i>IEEE Internet of Things Journal</i>, vol. 12, no. 16, pp. 34309-34320, 2025, DOI: 10.1109/JIOT.2025.3578537. 
+                            <span style="display: inline-block; white-space: nowrap; vertical-align: middle;">
+                                <a href="https://ieeexplore.ieee.org/abstract/document/11029446" target="_blank" style="text-decoration: none;" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                                <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/JIOT.2025.3578537" style="vertical-align: middle; height: 20px; margin-left: 4px; display: inline-block;" onerror="this.style.display='none'">
+                            </span>
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[38] Y. Wang, B. Yang, M. Sun, and <strong>Hao Jiang</strong>, "Fusing Both RSSI and Distance Signal for UWB Indoor Localization via Cross Attention Mechanism," <i>IEEE Wireless Communications Letters</i>, vol. 14, no. 8, pp. 2526-2530, 2025, DOI: 10.1109/LWC.2025.3574870. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11017723" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/LWC.2025.3574870" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[39] X. Gan, H. Wang, X. Li, Z. Liu, <strong>Hao Jiang</strong>, and J. Wang, "A Multitarget Backdoor Attack Against Automatic Modulation Recognition for IoT Wireless Signals," <i>IEEE Internet of Things Journal</i>, vol. 12, no. 14, pp. 27588-27605, 2025, DOI: 10.1109/JIOT.2025.3563204. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/10973081" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/JIOT.2025.3563204" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[40] Y. Fan, Z. Liu, R. Yao, <strong>Hao Jiang</strong>, J. Shi, and X. Yang, "Multi-Objective Regular Mapping QoS Path Planning for Mega LEO Constellation Networks," <i>IEEE Transactions on Communications</i>, vol. 73, no. 10, pp. 9704-9719, 2025, DOI: 10.1109/TCOMM.2025.3562327. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/10969829" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/TCOMM.2025.3562327" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[41] W. Xie, H. Wang, Z. Shen, X. Li, Z. Liu, and <strong>Hao Jiang</strong>, "A Novel Radio Frequency Fingerprint Identification Scheme for Few-Shot Open-Set Recognition," <i>IEEE Internet of Things Journal</i>, vol. 12, no. 13, pp. 25691-25706, 2025, DOI: 10.1109/JIOT.2025.3559183. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/10960433" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/JIOT.2025.3559183" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[42] L. Zeng, X. Liao, Y. Zhu, Z. Ma, J. Yang, X. Peng, and <strong>Hao Jiang</strong>, "Second-Order Statistics and Burst Error Analysis of UAV-to-UAV Rician Fading Channels," <i>IEEE Transactions on Vehicular Technology</i>, vol. 74, no. 8, pp. 13041-13055, 2025, DOI: 10.1109/TVT.2025.3556289. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/10945646" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/TVT.2025.3556289" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+                 
+                    <p class="pcontainer">
+                        <span>[43] X. Pan, W. Shi, B. Xiong, D. Guo, and <strong>Hao Jiang</strong>, "Research on Channel Modeling for Aerial Reconfigurable Intelligent Surfaces-assisted Vehicle Communications," <i>Journal of Electronics & Information Technology</i>, vol. 47, no. 3, pp. 600-611, 2025, DOI: 10.11999/JEIT240874. 
+                            <a href="https://jeit.ac.cn/cn/article/doi/10.11999/JEIT240874" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>JEIT URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.11999/JEIT240874" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[44] Z. Chang, P. Tang, J. Zhang, <strong>Hao Jiang</strong>, and G. Liu, "Environment Reconstruction With Multi-Targets Reflectors-Merged Sensing Method Based on THz Single-Sided Channel Characteristics," <i>IEEE Wireless Communications Letters</i>, vol. 14, no. 5, pp. 1471-1475, May 2025, DOI: 10.1109/LWC.2025.3545593.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10902442" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/LWC.2025.3545593" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>
+                            [45] Y. Zha, H. Wang, Z. Shen, <strong>Hao Jiang</strong>, and J. Wang, "An Efficient Federated Automatic Modulation Recognition Scheme With Adaptive Model Pruning," <i>IEEE Sensors Journal</i>, vol. 25, no. 13, pp. 23292-23303, 2025, DOI: 10.1109/JSEN.2025.3541110.
+                            <span style="white-space: nowrap;">
+                                &nbsp;<a href="https://ieeexplore.ieee.org/abstract/document/10891629" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                                <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/JSEN.2025.3541110" style="vertical-align: middle; margin-left: 4px;" onerror="this.style.display='none'">
+                            </span>
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[46] C. Gu, B. Wu, D. Guo, and <strong>Hao Jiang</strong>, "Dynamic environment UAV deployment algorithm based on potential game theory," <i>IET Communications</i>, vol. 19, no. 1, Jan. 2025, DOI: 10.1049/cmu2.12776.
+                        <a href="https://doi.org/10.1049/cmu2.12776" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IET URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1049/cmu2.12776" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer" style="line-height: 1.6;">
+                        <span>
+                            [47] <strong>Hao Jiang</strong>, W. Shi, Z. Chen, Z. Zhang, K.-K. Wong, and H. Shin, "Dynamic Channel Modeling of Fluid Antenna Systems in UAV Communications," <i>IEEE Wireless Communications Letters</i>, vol. 14, no. 10, pp. 3169-3173, 2025, DOI: 10.1109/LWC.2025.3588223.
+                        </span>
+                        <br> <span style="display: inline-block; margin-top: 4px; font-size: 0.95em;">
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11078433" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/LWC.2025.3588223" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[48] L. Zeng, X. Liao, Z. Ma, W. Xie, <strong>Hao Jiang</strong>, and Z. Chen, "Toward more adaptive UAV-to-UAV GBSMs: Introducing the extended vMF distribution," <i>IEEE Wireless Communications Letters</i>, vol. 25, no. 14, pp. 260-264, Feb. 2025, DOI: 10.1109/LWC.2024.3485611.
+                            <a href="https://ieeexplore.ieee.org/abstract/document/10736443" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/LWC.2024.3485611" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[49] <strong>Hao Jiang</strong>, W. Shi, X. Chen, Q. Zhu, and Z. Chen, "High-efficient near-field channel characteristics analysis for large-scale MIMO communication systems," <i>IEEE Internet of Things Journal</i>, vol. 12, no. 6, pp. 7446-7458, Mar. 2025, DOI: 10.1109/JIOT.2024.3496434.
+                            <a href="https://arxiv.org/abs/2410.08463" target="_blank" class="pub-tag pub-tag-arxiv"><i class="fa fa-file-text-o" style="margin-right: 3px;"></i>arXiv</a>
+                            <a href="https://ieeexplore.ieee.org/document/10750315" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/JIOT.2024.3496434" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[50] <strong>Hao Jiang</strong>, W. Shi, Z. Zhang, C. Pan, Q. Wu, F. Shu, R. Liu, Z. Chen, and J. Wang, "Large-scale RIS enabled air-ground channels: near-field modeling and analysis," <i>IEEE Transactions on Wireless Communications</i>, vol. 24, no. 2, pp. 1074-1088, Feb. 2025, DOI: 10.1109/TWC.2024.3504839.
+                            <a href="https://arxiv.org/abs/2403.12781" target="_blank" class="pub-tag pub-tag-arxiv"><i class="fa fa-file-text-o" style="margin-right: 3px;"></i>arXiv</a>
+                            <a href="https://ieeexplore.ieee.org/document/10776032" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/TWC.2024.3504839" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer" style="line-height: 1.6;">
+                        <span style="display: inline-block; vertical-align: middle;">
+                            [51] Z. Chen, L. Huang, H. C. So, <strong>Hao Jiang</strong>, X. Zhang, and J. Wang, "Deep Reinforcement Learning Over RIS-Assisted Integrated Sensing and Communication: Challenges and Opportunities," <i>IEEE Vehicular Technology Magazine</i>, vol. 20, no. 3, pp. 97-105, 2025, DOI: 10.1109/MVT.2024.3503537. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/10812919" target="_blank" style="text-decoration: none;" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/MVT.2024.3503537" style="vertical-align: middle; height: 20px; margin-left: 4px; display: inline-block;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>
+                            [52] C. Ruan, Z. Zhang, <strong>Hao Jiang</strong>, J. Dang, L. Wu, and H. Zhang, "Wideband near-field channel covariance estimation for XL-MIMO systems in the face of beam split," <i>IEEE Transactions on Vehicular Technology</i>, vol. 74, no. 2, pp. 2912-2926, Feb. 2025, DOI: 10.1109/TVT.2024.3471733.
+                            <span style="white-space: nowrap;">
+                                &nbsp;<a href="https://ieeexplore.ieee.org/document/10709906" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                                <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/TVT.2024.3471733" style="vertical-align: middle; margin-left: 4px;" onerror="this.style.display='none'">
+                            </span>
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>
+                            [53] T. Liu, <strong>Hao Jiang</strong>, X. Wang, X. Yang, and Z. Chen, "Bayesian Estimator and Detector for Massive Communication With Ultra Massive MIMO," <i>IEEE Internet of Things Journal</i>, vol. 12, no. 9, pp. 12815-12828, Dec. 2024, DOI: 10.1109/JIOT.2024.3523939.
+                            <span style="white-space: nowrap;">
+                                &nbsp;<a href="https://ieeexplore.ieee.org/abstract/document/10818459" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                                <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/JIOT.2024.3523939" style="vertical-align: middle; margin-left: 4px;" onerror="this.style.display='none'">
+                            </span>
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[54] Z. Chen, L. Huang, H. C. So, <strong>Hao Jiang</strong>, X. Y. Zhang, and J. Wang, "Deep Reinforcement Learning Over RIS-Assisted Integrated Sensing and Communication: Challenges and Opportunities," <i>IEEE Vehicular Technology Magazine</i>, vol. 20, no. 3, pp. 97-105, Sept. 2025, DOI: 10.1109/MVT.2024.3503537.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10812919" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/MVT.2024.3503537" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[55] S. Zhang, Z. Li, H. Li, Y. Zha, <strong>Hao Jiang</strong>, H. Wang, and Z. Shen, "Novel Radio Environment Map Construction Scheme for 3-D and Full Band for Modern Internet of Things Applications," <i>IEEE Internet of Things Journal</i>, vol. 12, no. 9, pp. 12419-12432, Dec. 2024, DOI: 10.1109/JIOT.2024.3520611.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10810354" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/JIOT.2024.3520611" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[56] C. Chen, <strong>Hao Jiang</strong>, and C. Pan, "Location-Dependent Performance Analysis for RIS-Aided or Interference Mitigation Assisted Large-Scale Networks," <i>IEEE Transactions on Vehicular Technology</i>, vol. 74, no. 4, pp. 6844-6849, Apr. 2025, DOI: 10.1109/TVT.2024.3514358.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10787149" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/TVT.2024.3514358" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[57] <strong>Hao Jiang</strong>, W. Shi, Z. Zhang, C. Pan, Q. Wu, and F. Shu, "Large-Scale RIS Enabled Air-Ground Channels: Near-Field Modeling and Analysis," <i>IEEE Transactions on Wireless Communications</i>, vol. 24, no. 2, pp. 1074-1088, Feb. 2025, DOI: 10.1109/TWC.2024.3504839. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/10776032" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/TWC.2024.3504839" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[58] <strong>Hao Jiang</strong>, W. Shi, Q. Zhu, F. Shu, and J. Wang, "Research on Channel Modeling and Characteristics Analysis for RIS-Enabled Near-Field Marine Communications Towards 6G," <i>Journal of Electronics & Information Technology</i>, vol. 46, no. 12, pp. 4383-4390, Dec. 2024, DOI: 10.11999/JEIT240518. 
+                            <a href="https://jeit.ac.cn/cn/article/doi/10.11999/JEIT240518" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>JEIT URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.11999/JEIT240518" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[59] <strong>Hao Jiang</strong>, W. Shi, X. Chen, Q. Zhu, and Z. Chen, "High-Efficient Near-Field Channel Characteristics Analysis for Large-Scale MIMO Communication Systems," <i>IEEE Internet of Things Journal</i>, vol. 12, no. 6, pp. 7446-7458, Mar. 2025, DOI: 10.1109/JIOT.2024.3496434. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/10750315" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/JIOT.2024.3496434" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[60] L. Zeng, X. Liao, Z. Ma, W. Liu, <strong>Hao Jiang</strong>, and Z. Chen, "Toward More Adaptive UAV-to-UAV GBSMs: Introducing the Extended vMF Distribution," <i>IEEE Wireless Communications Letters</i>, vol. 14, no. 2, pp. 260-264, Feb. 2025, DOI: 10.1109/LWC.2024.3485611.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10736443" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/LWC.2024.3485611" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[61] C. Ruan, Z. Zhang, <strong>Hao Jiang</strong>, J. Dang, L. Wu, and H. Zhang, "Wideband Near-Field Channel Covariance Estimation for XL-MIMO Systems in the Face of Beam Split," <i>IEEE Transactions on Vehicular Technology</i>, vol. 74, no. 2, pp. 2912-2926, Feb. 2025, DOI: 10.1109/TVT.2024.3471733.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10709906" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/TVT.2024.3471733" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[62] Z. Chen, Y. Guo, P. Zhang, <strong>Hao Jiang</strong>, Y. Xiao, and L. Huang, "Physical Layer Security Improvement for Hybrid RIS-Assisted MIMO Communications," <i>IEEE Communications Letters</i>, vol. 28, no. 11, pp. 2493-2497, Nov. 2024, DOI: 10.1109/LCOMM.2024.3427010.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10637971" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/LCOMM.2024.3427010" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[63] W. Shi, <strong>Hao Jiang</strong>, B. Xiong, X. Chen, H. Zhang, and Z. Chen, "RIS-Empowered V2V Communications: Three-Dimensional Beam Domain Channel Modeling and Analysis," <i>IEEE Transactions on Wireless Communications</i>, vol. 23, no. 11, pp. 15844-15857, Nov. 2024, DOI: 10.1109/TWC.2024.3434568. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/10623372" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/TWC.2024.3434568" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[64] C. Ruan, Z. Zhang, <strong>Hao Jiang</strong>, Y. Qi, J. Dang, and L. Wu, "Low Complexity Orthogonal Matching Pursuit-Based Near-Field Channel Estimation in XL-MIMO Systems," <i>IEEE Communications Letters</i>, vol. 28, no. 12, pp. 2859-2863, Dec. 2024, DOI: 10.1109/LCOMM.2024.3437361.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10621011" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/LCOMM.2024.3437361" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[65] N. Yang, <strong>Hao Jiang</strong>, D. Guo, Y. Liu, G. Ding, and Z. Chen, "Proof of Reputation: A Blockchain-Based Countermeasure to Defend Against Massive SSDF in Cognitive Radio Networks," <i>IEEE Communications Letters</i>, vol. 28, no. 11, pp. 2693-2697, Nov. 2024, DOI: 10.1109/LCOMM.2024.3419829.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10574820" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/LCOMM.2024.3419829" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[66] L. Zeng, X. Liao, Z. Ma, W. Xie, <strong>Hao Jiang</strong>, and Z. Chen, "Envelope Level Crossing Rate and Average Fade Duration of Low-Altitude UAV-to-UAV Channels," <i>IEEE Wireless Communications Letters</i>, vol. 13, no. 8, pp. 2220-2224, Aug. 2024, DOI: 10.1109/LWC.2024.3407865.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10543157" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/LWC.2024.3407865" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[67] L. Zeng, X. Liao, Z. Ma, <strong>Hao Jiang</strong>, and Z. Chen, "UAV-to-UAV MIMO Systems Under Multimodal Nonisotropic Scattering: Geometrical Channel Modeling and Outage Performance Analysis," <i>IEEE Internet of Things Journal</i>, vol. 11, no. 15, pp. 26266-26278, Aug. 2024, DOI: 10.1109/JIOT.2024.3395524.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10511285" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/JIOT.2024.3395524" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[68] <strong>Hao Jiang</strong>, H. Zhang, and T. Liu, "Novel sum-of-sinusoids simulation channel modeling for 6G multiple-input multiple-output vehicle-to-everything communications," <i>China Communications</i>, vol. 21, no. 1, pp. 242-259, Jan. 2024, DOI: 10.23919/JCC.fa.2022-0237.202401. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/10433463" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.23919/JCC.fa.2022-0237.202401" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[69] Y. Liu, S. Zhao, F. Han, M. Chai, <strong>Hao Jiang</strong>, and H. Zhang, "Data Collection for Target Localization in Ocean Monitoring Radar-Communication Networks," <i>Remote Sensing</i>, vol. 15, no. 21, p. 5126, Oct. 2023, DOI: 10.3390/rs15215126.
+                        <a href="https://www.mdpi.com/2072-4292/15/21/5126" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>MDPI URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.3390/rs15215126" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[70] C. Ruan, Z. Zhang, <strong>Hao Jiang</strong>, H. Zhang, J. Dang, and L. Wu, "Simplified Learned Approximate Message Passing Network for Beamspace Channel Estimation in mmWave Massive MIMO Systems," <i>IEEE Transactions on Wireless Communications</i>, vol. 23, no. 5, pp. 5142-5156, May 2024, DOI: 10.1109/TWC.2023.3324679.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10292612" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/TWC.2023.3324679" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[71] T. Liu, X. Yang, <strong>Hao Jiang</strong>, H. Zhang, and Z. Chen, "Reconfigurable Intelligent Surface Enhanced Massive Connectivity With Massive MIMO," <i>IEEE Transactions on Communications</i>, vol. 71, no. 12, pp. 7441-7454, Dec. 2023, DOI: 10.1109/TCOMM.2023.3326202.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10288535" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/TCOMM.2023.3326202" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[72] L. Zeng, X. Liao, Z. Ma, B. Xiong, <strong>Hao Jiang</strong>, and Z. Chen, "Three-Dimensional UAV-to-UAV Channels: Modeling, Simulation, and Capacity Analysis," <i>IEEE Internet of Things Journal</i>, vol. 11, no. 6, pp. 10054-10068, Mar. 2024, DOI: 10.1109/JIOT.2023.3325945. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/10288151" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/JIOT.2023.3325945" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[73] T. Liu, <strong>Hao Jiang</strong>, Z. Yang, and Z. Chen, "Reconfigurable Intelligent Surface Enhanced Massive IoT Systems With Nonlinear Measurements," <i>IEEE Wireless Communications Letters</i>, vol. 12, no. 11, pp. 1976-1980, Nov. 2023, DOI: 10.1109/LWC.2023.3312650.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10242367" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/LWC.2023.3312650" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[74] T. Liu, <strong>Hao Jiang</strong>, X. Yang, and Z. Yang, "Channel Estimation and Device Detection for Reconfigurable Intelligent Surface Aided Massive IoT Networks With Mixed-ADCs," <i>IEEE Communications Letters</i>, vol. 27, no. 10, pp. 2737-2741, Oct. 2023, DOI: 10.1109/LCOMM.2023.3310515.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10236509" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/LCOMM.2023.3310515" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[75] T. Liu, <strong>Hao Jiang</strong>, Z. Chen, H. Zhang, X. Yang, and F. Shu, "Nonlinear channel estimation and signal detection for quantized OFDM system," <i>IEEE Communications Letters</i>, vol. 27, no. 10, pp. 2772-2776, Oct. 2023, DOI: 10.1109/LCOMM.2023.3302311.
+
+
+                            <a href="https://ieeexplore.ieee.org/document/10210058" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/LCOMM.2023.3302311" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[76] <strong>Hao Jiang</strong>, B. Xiong, H. Zhang, and E. Basar, "Physics-Based 3D End-to-End Modeling for Double-RIS Assisted Non-Stationary UAV-to-Ground Communication Channels," <i>IEEE Transactions on Communications</i>, vol. 71, no. 7, pp. 4247-4261, Jul. 2023, DOI: 10.1109/TCOMM.2023.3266832. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/10101829" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/TCOMM.2023.3266832" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[77] <strong>Hao Jiang</strong>, B. Xiong, H. Zhang, and E. Basar, "Hybrid Far- and Near-Field Modeling for Reconfigurable Intelligent Surface Assisted V2V Channels: A Sub-Array Partition Based Approach," <i>IEEE Transactions on Wireless Communications</i>, vol. 22, no. 11, pp. 8290-8303, Nov. 2023, DOI: 10.1109/TWC.2023.3262063. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/10090477" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/TWC.2023.3262063" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[78] C. Ruan, Z. Zhang, <strong>Hao Jiang</strong>, J. Dang, L. Wu, and H. Zhang, "Vector approximate message passing with sparse Bayesian learning for Gaussian mixture prior," <i>China Communications</i>, vol. 20, no. 5, pp. 57-69, May 2023, DOI: 10.23919/JCC.2023.00.005.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10056780" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.23919/JCC.2023.00.005" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[79] 张在琛, <strong>江浩</strong>. 智能超表面使能无人机高能效通信信道建模与特性分析, <i>电子学报</i>, vol. 51, no. 10, pp. 2623-2634, 2023, DOI: 10.12263/DZXB.20221352. 
+                            <a href="https://ejournal.org.cn/thesisDetails#10.12263/DZXB.20221352&lang=zh" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>电子学报</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.12263/DZXB.20221352" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer" style="line-height: 1.6;">
+                        <span style="display: inline-block; vertical-align: middle;">
+                            [80] B. Xiong, Z. Zhang, and <strong>Hao Jiang</strong>, "Reconfigurable Intelligent Surface for mmWave Mobile Communications: What If LoS Path Exists?," <i>IEEE Wireless Communications Letters</i>, vol. 12, no. 2, pp. 247-251, Feb. 2023, DOI: 10.1109/LWC.2022.3222164. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/9951142" target="_blank" style="text-decoration: none;" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/LWC.2022.3222164" style="vertical-align: middle; height: 20px; margin-left: 4px; display: inline-block;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[81] B. Wu, B. Zhang, D. Guo, H. Wang, and <strong>Hao Jiang</strong>, "Anti-jamming trajectory design for UAV-enabled wireless sensor networks using communication flight corridor," <i>China Communications</i>, vol. 19, no. 7, pp. 37-52, Jul. 2022, DOI: 10.23919/JCC.2022.07.004.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/9837847" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.23919/JCC.2022.07.004" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[82] C. Wei, <strong>Hao Jiang</strong>, J. Dang, L. Wu, and H. Zhang, "Accurate Channel Estimation for mmWave Massive MIMO With Partially Coherent Phase Offsets," <i>IEEE Communications Letters</i>, vol. 26, no. 9, pp. 2170-2174, Sep. 2022, DOI: 10.1109/LCOMM.2022.3184790.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/9801831" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/LCOMM.2022.3184790" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[83] C. Ruan, Z. Zhang, <strong>Hao Jiang</strong>, J. Dang, L. Wu, and H. Zhang, "Approximate Message Passing for Channel Estimation in Reconfigurable Intelligent Surface Aided MIMO Multiuser Systems," <i>IEEE Transactions on Communications</i>, vol. 70, no. 8, pp. 5469-5481, Aug. 2022, DOI: 10.1109/TCOMM.2022.3182369.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/9794650" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <a href="https://github.com/BrooklynSEUPHD/Finite-blocklength-Fluid-Antenna-Systems-With-Spatial-Block-Correlation-Channel-Model" target="_blank" class="pub-tag pub-tag-code"><i class="fa fa-code" style="margin-right: 3px;"></i>Code</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/TCOMM.2022.3182369" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[84] B. Wu, D. Guo, B. Zhang, X. Zhang, H. Wang, H. Wang, and <strong>Hao Jiang</strong>, "Completion time minimization for UAV enabled data collection with communication link constrained," <i>IET Communications</i>, vol. 16, no. 10, pp. 1025-1040, Jun. 2022, DOI: 10.1049/cmu2.12378.
+                        <a href="https://ietresearch.onlinelibrary.wiley.com/doi/full/10.1049/cmu2.12378" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>Wiley URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1049/cmu2.12378" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[85] <strong>Hao Jiang</strong>, L. Dai, M. Hao, and R. MacKenzie, "End-to-End Learning for RIS-Aided Communication Systems," <i>IEEE Transactions on Vehicular Technology</i>, vol. 71, no. 6, pp. 6778-6783, Jun. 2022, DOI: 10.1109/TVT.2022.3162624.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/9745781" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/TVT.2022.3162624" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[86] B. Xiong, Z. Zhang, <strong>Hao Jiang</strong>, J. Zhang, L. Wu, and J. Dang, "A 3D Non-Stationary MIMO Channel Model for Reconfigurable Intelligent Surface Auxiliary UAV-to-Ground mmWave Communications," <i>IEEE Transactions on Wireless Communications</i>, vol. 21, no. 7, pp. 5658-5672, Jul. 2022, DOI: 10.1109/TWC.2022.3142437.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/9687128" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/TWC.2022.3142437" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[87] F. Han, H. Deng, J. Shi, and <strong>Hao Jiang</strong>, "Joint Power and Subchannel Allocation for Distributed Storage in Cellular-D2D Underlays," <i>Sensors</i>, vol. 21, no. 23, p. 8059, Dec. 2021, DOI: 10.3390/s21238059.
+                        <a href="https://www.mdpi.com/1424-8220/21/23/8059" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>MDPI URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.3390/s21238059" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[88] B. Xiong, Z. Zhang, <strong>Hao Jiang</strong>, H. Zhang, J. Zhang, and L. Wu, "A Statistical MIMO Channel Model for Reconfigurable Intelligent Surface Assisted Wireless Communications," <i>IEEE Transactions on Communications</i>, vol. 70, no. 2, pp. 1360-1375, Feb. 2022, DOI: 10.1109/TCOMM.2021.3129926.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/9632559" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/TCOMM.2021.3129926" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[89] <strong>Hao Jiang</strong>, R. He, C. Ruan, J. Zhou, and D. Chang, "Three-Dimensional Geometry-Based Stochastic Channel Modeling for Intelligent Reflecting Surface-Assisted UAV MIMO Communications," <i>IEEE Wireless Communications Letters</i>, vol. 10, no. 12, pp. 2727-2731, Dec. 2021, DOI: 10.1109/LWC.2021.3113669.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/9548684" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/LWC.2021.3113669" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer" style="line-height: 1.6;">
+                        <span style="display: inline-block; vertical-align: middle;">
+                            [90] Z. Gong, L. Wu, Z. Zhang, J. Dang, B. Zhu, and <strong>Hao Jiang</strong>, "Joint TOA and DOA Estimation With CFO Compensation Using Large-Scale Array," <i>IEEE Transactions on Signal Processing</i>, vol. 69, pp. 4204-4218, Jul. 2021, DOI: 10.1109/TSP.2021.3095722. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/9479692" target="_blank" style="text-decoration: none;" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/TSP.2021.3095722" style="vertical-align: middle; height: 20px; margin-left: 4px; display: inline-block;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[91] <strong>Hao Jiang</strong>, C. Ruan, Z. Zhang, J. Dang, L. Wu, and M. Mukherjee, "A General Wideband Non-Stationary Stochastic Channel Model for Intelligent Reflecting Surface-Assisted MIMO Communications," <i>IEEE Transactions on Wireless Communications</i>, vol. 20, no. 8, pp. 5314-5328, Aug. 2021, DOI: 10.1109/TWC.2021.3066806.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/9385923" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/TWC.2021.3066806" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[92] <strong>Hao Jiang</strong>, B. Xiong, Z. Zhang, J. Zhang, H. Zhang, and J. Dang, "Novel Statistical Wideband MIMO V2V Channel Modeling Using Unitary Matrix Transformation Algorithm," <i>IEEE Transactions on Wireless Communications</i>, vol. 20, no. 8, pp. 4947-4961, Aug. 2021, DOI: 10.1109/TWC.2021.3063762.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/9376665" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/TWC.2021.3063762" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[93] J. Dang, S. Gao, Y. Zhu, R. Guo, <strong>Hao Jiang</strong>, Z. Zhang, L. Wu, B. Zhu, and L. Wang, "A geometry-based stochastic channel model and its application for intelligent reflecting surface assisted wireless communication," <i>IET Communications</i>, vol. 15, no. 3, pp. 421-434, Feb. 2021, DOI: 10.1049/cmu2.12075.
+                        <a href="https://ietresearch.onlinelibrary.wiley.com/doi/full/10.1049/cmu2.12075" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>Wiley URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1049/cmu2.12075" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[94] C. Wang, Y. Zhang, X. Chen, <strong>Hao Jiang</strong>, M. Mukherjee, and S. Wang, "Automatic Building Detection from High-Resolution Remote Sensing Images Based on Joint Optimization and Decision Fusion of Morphological Attribute Profiles," <i>Remote Sensing</i>, vol. 13, no. 3, p. 357, Jan. 2021, DOI: 10.3390/rs13030357.
+                        <a href="https://www.mdpi.com/2072-4292/13/3/357" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>MDPI URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.3390/rs13030357" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[95] B. Xiong, Z. Zhang, J. Zhang, <strong>Hao Jiang</strong>, J. Dang, and L. Wu, "Novel Multi-Mobility V2X Channel Model in the Presence of Randomly Moving Clusters," <i>IEEE Transactions on Wireless Communications</i>, vol. 20, no. 5, pp. 3180-3195, May 2021, DOI: 10.1109/TWC.2020.3047957.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/9316947" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/TWC.2020.3047957" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[96] D. Chang, <strong>Hao Jiang</strong>, J. Zhou, H. Zhang, and M. Mukherjee, "Capacity optimization using augmented lagrange method in intelligent reflecting surface-based MIMO communication systems," <i>China Communications</i>, vol. 17, no. 12, pp. 123-138, Dec. 2020, DOI: 10.23919/JCC.2020.12.009.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/9312796" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.23919/JCC.2020.12.009" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer" style="line-height: 1.6;">
+                        <span style="display: inline-block; vertical-align: middle;">
+                            [97] J. Zhou, X. Wang, <strong>Hao Jiang</strong>, S. Sasaki, and G. Shao, "MIMO channel estimation with arbitrary angle of arrival incident power spectrum for wireless communications," <i>IET Communications</i>, vol. 15, no. 2, pp. 232-244, Jan. 2021, DOI: 10.1049/cmu2.12049. 
+                            <a href="https://ietresearch.onlinelibrary.wiley.com/doi/full/10.1049/cmu2.12049" target="_blank" style="text-decoration: none;" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>Wiley URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1049/cmu2.12049" style="vertical-align: middle; height: 20px; margin-left: 4px; display: inline-block;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer" style="line-height: 1.6;">
+                        <span style="display: inline-block; vertical-align: middle;">
+                            [98] J. Zhou, Z. Chen, <strong>Hao Jiang</strong>, and H. Kikuchi, "Channel modelling for vehicle-to-vehicle MIMO communications in geometrical rectangular tunnel scenarios," <i>IET Communications</i>, vol. 14, no. 19, pp. 3420-3427, Dec. 2020, DOI: 10.1049/iet-com.2018.6010. 
+                            <a href="https://ietresearch.onlinelibrary.wiley.com/doi/full/10.1049/iet-com.2018.6010" target="_blank" style="text-decoration: none;" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>Wiley URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1049/iet-com.2018.6010" style="vertical-align: middle; height: 20px; margin-left: 4px; display: inline-block;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[99] <strong>Hao Jiang</strong>, M. Mukherjee, J. Zhou, and J. Lloret, "Channel Modeling and Characteristics for 6G Wireless Communications," <i>IEEE Network</i>, vol. 35, no. 1, pp. 296-303, Jan./Feb. 2021, DOI: 10.1109/MNET.011.2000348.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/9267779" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/MNET.011.2000348" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[100] 朱秋明, 华博宇, 毛开, 仲伟志, 陈小敏, 周彤彤, "无人机毫米波信道建模进展和挑战," <i>数据采集与处理</i>, vol. 35, no. 6, p. 1049, Jun. 2020, DOI: 10.16337/j.1004-9037.2020.06.004.
+                        <a href="https://openurl.ebsco.com/EPDB%3Agcd%3A15%3A343735279/detailv2?sid=ebsco%3Aplink%3AScholar&id=ebsco%3A148127868&crl=c&link_origin=scholar.google.com" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>EBSCO URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.16337/j.1004-9037.2020.06.004" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[101] M. Mukherjee, R. Matam, C. X. Mavromoustakis, <strong>Hao Jiang</strong>, G. Mastorakis, and M. Guo, "Intelligent Edge Computing: Security and Privacy Challenges," <i>IEEE Communications Magazine</i>, vol. 58, no. 9, pp. 26-31, Sep. 2020, DOI: 10.1109/MCOM.001.2000297.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/9214383" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/MCOM.001.2000297" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[102] <strong>Hao Jiang</strong>, Z. Zhang, C.-X. Wang, J. Zhang, J. Dang, and L. Wu, "A Novel 3D UAV Channel Model for A2G Communication Environments Using AoD and AoA Estimation Algorithms," <i>IEEE Transactions on Communications</i>, vol. 68, no. 11, pp. 7232-7246, Nov. 2020, DOI: 10.1109/TCOMM.2020.3011716.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/9146923" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/TCOMM.2020.3011716" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer" style="line-height: 1.6;">
+                        <span style="display: inline-block; vertical-align: middle;">
+                            [103] Z. Gong, L. Wu, Z. Zhang, J. Dang, B. Zhu, and <strong>Hao Jiang</strong>, "Joint TOA and DOA Estimation With CFO Compensation Using Large-Scale Array," <i>IEEE Transactions on Signal Processing</i>, vol. 69, pp. 4204-4218, Jul. 2021, DOI: 10.1109/TSP.2021.3095722. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/9479692" target="_blank" style="text-decoration: none;" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/TSP.2021.3095722" style="vertical-align: middle; height: 20px; margin-left: 4px; display: inline-block;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                </ul>
+            </font>
+            <br />
+            <br />
+            <br />
+
+            <p><b>
+                    <font style="font-size: 18px;">Conferences</font>
+                </b>: </p>
+            <font size="3">
+
+                <ul>
+                    <p class="pcontainer">
+                        <span>[104] H. Liang, Z. Zhang, J. Dang, <strong>Hao Jiang</strong>, and Z. Zhang, "Neural Networks-Enabled Channel Reconstruction for Fluid Antenna Systems: A Data-Driven Approach," in <i>Proc. 2026 IEEE Wireless Communications and Networking Conference Workshops (WCNCW)</i>, Kuala Lumpur, Malaysia, 2026, DOI: 10.1109/WCNCW67598.2026.11555202. 
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11555202" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/WCNCW67598.2026.11555202" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[105] Z. Zhang, D. Morales-Jimenez, <strong>Hao Jiang</strong>, and C. Masouros, "A Universal Block Error Rate Bound for Fluid Antenna Systems," in <i>Proc. 2026 IEEE Wireless Communications and Networking Conference Workshops (WCNCW)</i>, Kuala Lumpur, Malaysia, 2026, DOI: 10.1109/WCNCW67598.2026.11555441.
+                            <a href="https://ieeexplore.ieee.org/abstract/document/11555441" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                            <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/WCNCW67598.2026.11555441" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[106] Y. Liu, Z. Zhang, B. Xiong, <strong>Hao Jiang</strong>, Y. Li, and L. Wu, "Achievable Rate Analysis of UAV-Mounted RIS-Assisted Link with UAV 3D Location Variation," in <i>2024 16th International Conference on Wireless Communications and Signal Processing (WCSP)</i>, Hefei, China, Oct. 2024, DOI: 10.1109/WCSP62071.2024.10827734.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10827734" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/WCSP62071.2024.10827734" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[107] L. Zeng, X. Liao, Y. Zhu, Z. Ma, and <strong>Hao Jiang</strong>, "On Cylinder- vs. Sphere-Based Stochastic Modeling of Space-Time Correlated UAV-to-UAV Channels," in <i>2024 IEEE 24th International Conference on Communication Technology (ICCT)</i>, Chengdu, China, Oct. 2024, DOI: 10.1109/ICCT62411.2024.10946512.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10946512" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/ICCT62411.2024.10946512" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[108] Y. Guo, P. Zhang, J. Ye, Y. Xiao, <strong>Hao Jiang</strong>, and L. Huang, "Hybrid RIS-aided Physical Layer Security in MIMO Communications," in <i>2024 IEEE 9th International Conference on Computational Intelligence and Applications (ICCIA)</i>, Haikou, China, Aug. 2024, DOI: 10.1109/ICCIA62557.2024.10719317.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10719317" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/ICCIA62557.2024.10719317" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[109] S. Wang, <strong>Hao Jiang</strong>, and L. Xiang, "CT-MVSNet: Efficient Multi-view Stereo with Cross-Scale Transformer," in <i>MultiMedia Modeling</i>, pp. 394-408, Jan. 2024, DOI: 10.1007/978-3-031-53308-2_29.
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-031-53308-2_29" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>Springer URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1007/978-3-031-53308-2_29" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[110] B. Xiong, Z. Zhang, Y. Ge, H. Wang, <strong>Hao Jiang</strong>, and L. Wu, "Channel Modeling for Heterogeneous Vehicular ISAC System with Shared Clusters," in <i>2023 IEEE 98th Vehicular Technology Conference (VTC2023-Fall)</i>, Hong Kong, Oct. 2023, DOI: 10.1109/VTC2023-Fall60731.2023.10333720.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10333720" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/VTC2023-Fall60731.2023.10333720" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[111] <strong>Hao Jiang</strong>, Z. Zhang, B. Xiong, J. Dang, L. Wu, and J. Zhou, "A 3D Stochastic Channel Model for 6G Wireless Double-IRS Cooperatively Assisted MIMO Communications," in <i>2021 13th International Conference on Wireless Communications and Signal Processing (WCSP)</i>, Changsha, China, Oct. 2021, DOI: 10.1109/WCSP52459.2021.9613605.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/9613605" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/WCSP52459.2021.9613605" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+
+                    <p class="pcontainer">
+                        <span>[112] <strong>Hao Jiang</strong>, Z. Zhang, B. Xiong, J. Dang, and L. Wu, "A 3D Channel Model for Reconfigurable Intelligent Surface Aided UAV-to-Ground mmWave Communications," in <i>2020 IEEE/CIC International Conference on Communications in China (ICCC)</i>, Chongqing, China, Aug. 2020, DOI: 10.1109/ICCC49849.2020.9238805.
+                        <a href="https://ieeexplore.ieee.org/abstract/document/9238805" target="_blank" class="pub-tag pub-tag-ieee"><i class="fa fa-external-link" style="margin-right: 3px;"></i>IEEE URL</a>
+                        <img src="https://api.juleskreuer.eu/citation-badge.php?doi=10.1109/ICCC49849.2020.9238805" style="vertical-align: middle;" onerror="this.style.display='none'">
+                        </span>
+                    </p>
+                </ul>
+
+
+                <br />
+
+
+                <A NAME="Patents">
+                    <h2><i class="fa fa-file-archive-o" aria-hidden="true"></i>&nbsp;&nbsp;Patents</h2>
+                </A>
+                <font size="3">
+                    <ul>
+                        <li>江浩，“一种毫米波通信系统的信道估计方法”，发明专利，已授权，中国，ZL202111413744.2</li>
+                        <li>江浩，“一种压缩感知稀疏信号恢复方法及系统”，发明专利，已授权，中国，ZL202111413752.7</li>
+                        <li>江浩，等，“一种基于智能反射面MISO无线通信系统的信道容量优化方法”，发明专利，已授权，中国，ZL202010097176.9</li>
+                        <li>江浩，等，“一种基于三维空间的双簇几何信道建模方法”，发明专利，已授权，中国，ZL202010044969.4</li>
+                        <li>江浩，等，“一种面向低轨卫星通信的空时频非平稳传输特性分析方法”，发明专利，已授权，中国，ZL202210401167.3</li>
+                        <li>江浩，等，“一种无线通信的时域传输特性分析方法”，发明专利，已公开，中国，ZL 202211564048.6</li>
+                        <li>江浩，等，“一种基于IRS辅助无人机与无人船通信的信道建模方法”，发明专利，已授权，中国，ZL202210077477.4</li>
+                    </ul>
+                </font>
+                <br />
+
+
+                <A NAME="Awards">
+                    <h2><i class="fa fa-gift" aria-hidden="true"></i>&nbsp;&nbsp;Awards</h2>
+                </A>
+                <font size="3">
+                    <ul>
+                        
+
+                    </ul>
+                </font>
+
+                <br />
+                <br />
+
+                <A NAME="Alumni">
+                    <h2><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;&nbsp;Alumni</h2>
+                </A>
+                <ul id="gradstu">
+                    <li> <b>
+                        <font color="#FF0000">[2026]</font>
+                    </b> 张悦，工学硕士,&nbsp; 目前在中国人民解放军陆军工程大学攻读博士学位.
+                    </li>
+                    <br />
+                    
+                    <li> <b>
+                        <font color="#FF0000">[2025]</font>
+                    </b> 石旺旗，工学硕士,&nbsp; 目前在东南大学移动通信全国重点实验室攻读博士学位.
+                    </li>
+
+                </ul>
+                <br />
+
+                <A NAME="Cooperation">
+                    <h2><i class="fa fa-handshake-o" aria-hidden="true"></i>&nbsp;&nbsp;Cooperation</h2>
+                </A>
+
+                <font size="3">
+                    <ul>
+                        
+                        <li style="line-height: 2.2;">
+                            Kai-Kit Wong,<span style="margin-left: 12px;"></span>英国伦敦大学学院教授,<span style="margin-left: 12px;"></span>Fellow of IEEE.
+                            <a href="https://scholar.google.com/citations?hl=zh-CN&user=kVhcY0gAAAAJ" target="_blank" class="profile-tag" style="margin-top: 0; margin-left: 5px; vertical-align: middle;">
+                                <i class="fa fa-graduation-cap" aria-hidden="true" style="margin-right: 4px;"></i>Google Scholar
+                            </a>
+                            </li>
+                    </ul>
+                </font>
+                <br />
+
+
+                <div id="back_top">
+                    <div class="arrow"></div>
+                    <div class="stick"></div>
+                </div>
+
+                <script>
+                    $(function () {
+                        $(window).scroll(function () { //If scroll
+                            var scrollt = document.documentElement.scrollTop + document.body.scrollTop; //Getting Height after scroll
+                            if (scrollt > 400) {
+                                $("#back_top").fadeIn(400);
+                            } else {
+                                $("#back_top").stop().fadeOut(400);
+                            }
+                        });
+
+                        $("#back_top").click(function () {
+
+                            $("html,body").animate({
+                                scrollTop: "0px"
+                            }, 200);
+
+                        });
+
+                    });
+                </script>
+
+
+</body>
+
+</html>
